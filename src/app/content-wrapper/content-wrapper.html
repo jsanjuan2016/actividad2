@@ -1,0 +1,26 @@
+      <div class="content-wrapper">
+
+          <main class="main-content">
+              <h2>Galer&iacute;a de im&aacute;genes</h2>
+
+              <div id="article-container" class="container">
+                <!-- <router-outlet /> -->
+                <router-outlet
+                    (activate)='onActivate($event)'
+                    (deactivate)='onDeactivate($event)'
+                    (attach)='onAttach($event)'
+                    (detach)='onDetach($event)'>
+                </router-outlet>                 
+              </div>
+          </main>
+      </div>
+
+<!--PRUEBAS-->
+<router-outlet name="rate"
+    (activate)='onActivate($event)'
+    (deactivate)='onDeactivate($event)'
+    (attach)='onAttach($event)'
+    (detach)='onDetach($event)'>
+</router-outlet>
+<!--FIN PRUEBAS-->
+   

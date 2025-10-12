@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Galeria } from './galeria/galeria';
+import { Header } from './header/header';
+import { Footer } from './footer/footer';
+import { ContentWrapper } from './content-wrapper/content-wrapper';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Galeria],
+  imports: [Header, Footer, ContentWrapper],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

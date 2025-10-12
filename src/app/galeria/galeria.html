@@ -1,7 +1,14 @@
-<p>galeria works!</p>
-    <section>
-      <form>
-        <input type="text" placeholder="Filter by city" />
-        <button class="primary" type="button">Search</button>
-      </form>
-    </section>
+
+<div class="gallery-container">
+@for (photo of photos; track photo.url) {    
+  <div class="photo-card">
+    <a [routerLink]="['/photo', photo.id, photo.title]" rel="noopener noreferrer">
+      <img [src]="photo.url" [alt]="photo.title">
+      <p>{{ photo.title }}</p>
+    </a> 
+  </div>
+}
+</div>  
+<!-- <a routerLink="/">
+    <span>Home</span>
+</a> -->

@@ -1,1 +1,400 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+/* Estilos globales */
+body {
+    /*font-family: Arial, sans-serif;*/
+    font-family: "Lato", cursive;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.text-cyan {
+    color: #00e0ce;
+}
+.text-yellow {
+    color: #ffdf60;
+}
+
+/* Contenedor principal para las dos columnas (barra lateral y contenido) */
+.content-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 20px; /* Espacio entre la barra lateral y el contenido principal */
+}
+
+/* Estilos de la cabecera */
+.page-header {
+
+    background: #00c2b2;
+    background: linear-gradient(90deg,rgba(0, 194, 178, 1) 0%, rgba(43, 0, 87, 1) 100%);
+
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* Estilos de la barra lateral */
+.sidebar {
+    flex: 1; /* Permite que la barra lateral crezca y ocupe espacio */
+    /* background-color: #e2e2e2; */
+background: #ffffff;
+background: linear-gradient(0deg,rgb(243, 225, 185) 0%, rgb(238, 255, 252) 100%);
+
+box-shadow: 10px 10px 34px -1px rgba(0,0,0,0.23);
+-webkit-box-shadow: 10px 10px 34px -1px rgba(0,0,0,0.23);
+-moz-box-shadow: 10px 10px 34px -1px rgba(0,0,0,0.23); 
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 200px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li:before {
+    content: "·";
+    display: inline-block;
+    padding-right: 0.3rem;
+    vertical-align: middle;
+    font-weight: 900;    
+}
+
+.sidebar li {
+    padding: 2px 0;
+}
+
+/* Estilos del contenido principal */
+.main-content {
+    flex: 4; /* Hace que el contenido principal ocupe 3 veces más espacio que la barra lateral */
+    background-color: #fff;
+box-shadow: 10px 10px 34px -1px rgba(0,0,0,0.23);
+-webkit-box-shadow: 10px 10px 34px -1px rgba(0,0,0,0.23);
+-moz-box-shadow: 10px 10px 34px -1px rgba(0,0,0,0.23);     
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#toc-container ul a {
+    color: #333;
+    text-decoration: none;
+}
+#toc-container ul a.active {
+    color: #333;
+    font-weight: bold;
+    /* background-color: #eefffe; */
+    text-decoration: none;
+}
+
+/* Estilos para la paginación */
+.pagination {
+    text-align: center; 
+    margin-top: 30px;
+}
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    text-decoration: none; 
+    border-radius: 4px;
+    display: inline-block;   
+    
+    background-color: #fff;
+    color: #333;
+}
+.pagination a.active {
+    background-color: #333;
+    color: white;
+    border-color: #333;  
+}
+
+/* Estilos del pie de página */
+.page-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+.page-footer p {
+    margin: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+/* Estilos de utilidad para espaciados */
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+.mb-1 {
+    margin-bottom: 0.25rem !important;
+}
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+}
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+.mb-5 { 
+    margin-bottom: 3rem !important;
+}
+.mt-0 {
+    margin-top: 0 !important;
+}
+.mt-1 {
+    margin-top: 0.25rem !important;
+}
+.mt-2 {
+    margin-top: 0.5rem !important;
+}
+.mt-3 {
+    margin-top: 1rem !important;
+}
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+.mt-5 { 
+    margin-top: 3rem !important;
+}
+
+
+/***************************************************************************************************************/
+
+/* --- Estilos para el Menú de Navegación (NAV) --- */
+
+/* Contenedor principal del menú */
+.main-nav {
+    margin-top: 1rem;
+    padding: 0 10px;
+}
+
+/* Lista principal */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinea los elementos de la lista horizontalmente */
+    justify-content: center; /* Centra el menú en la cabecera */
+}
+
+/* Elementos de la lista principal */
+.main-nav li {
+    position: relative; /* Clave para posicionar el submenú */
+    padding: 0 15px;
+    margin: 0;
+}
+
+/* Enlaces del menú principal */
+.main-nav a {
+    color: #fff; /* Texto blanco para que contraste con el fondo de la cabecera */
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+/* Efecto al pasar el ratón en el menú principal */
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+
+/* --- Estilos para los Submenús (Dropdown) --- */
+
+/* Submenú (oculto por defecto) */
+.dropdown-menu {
+    display: none; /* Oculta el submenú */
+    position: absolute;
+    top: 100%; /* Lo coloca justo debajo del elemento padre */
+    left: 0;
+    min-width: 150px;
+    background-color: #333; /* Fondo oscuro para los submenús */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    padding: 5px 0;
+    border-radius: 4px;
+    text-align: left;
+    /* Elimina el flexbox para que los items vuelvan a ser verticales */
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Elementos del submenú */
+.dropdown-menu li {
+    width: 100%; /* Ocupa todo el ancho del submenú */
+    padding: 0;
+    margin: 0;
+}
+
+/* Enlaces dentro del submenú */
+.dropdown-menu a {
+    color: #fff;
+    padding: 8px 15px;
+    font-weight: 300;
+}
+
+/* Efecto al pasar el ratón en los enlaces del submenú */
+.dropdown-menu a:hover {
+    background-color: #00c2b2; /* Usa el color primario de la cabecera */
+    color: #fff;
+}
+
+/* Mostrar el submenú al pasar el ratón sobre el elemento padre (li.dropdown) */
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+
+/* --- Estilos para Submenús Anidados (Sub-Submenús) --- */
+
+/* Sub-submenú (anidado) */
+.submenu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 0; /* Alinea el top con el elemento padre (li.dropdown-submenu) */
+    left: 100%; /* Lo coloca a la derecha del elemento padre */
+    min-width: 120px;
+    background-color: #444; /* Un color ligeramente diferente para el nivel 2 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 11;
+    padding: 5px 0;
+    border-radius: 4px;
+}
+
+/* Mostrar el sub-submenú al pasar el ratón sobre el elemento padre (li.dropdown-submenu) */
+.dropdown-submenu:hover > .submenu {
+    display: block;
+}
+
+/* Ajuste para el enlace que abre el sub-submenú */
+.dropdown-submenu > a {
+    /* Mantiene el padding y estilo del nivel anterior */
+    padding-right: 25px; /* Más espacio a la derecha para el indicador > */
+    position: relative;
+}
+
+/***************************************************************************************************************/
+/* Estilos para fuentes */
+.kaushan-script-regular {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-100 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.roboto-300 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.roboto-500 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.roboto-700 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.roboto-900 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
