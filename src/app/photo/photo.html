@@ -4,6 +4,17 @@
     <img src="{{Url}}" alt="{{ Title }}">
   </div>    
     
-    <a routerLink="/galeria">
-        <span>Volver a la galer&iacute;a</span>
+  <div class="navigation-buttons">
+    @if (showBackButton) {
+      <button class="btn-back" (click)="goBackToGallery()">
+        <span>← Volver a la galería (Página {{ returnPage }})</span>
+      </button>
+    }
+    
+    <a routerLink="/galeria" class="nav-link">
+        <span>Ir a la galer&iacute;a</span>
     </a>
+    <a routerLink="/galeria-aleatoria" class="nav-link">
+        <span>Ir a fotos aleatorias</span>
+    </a>
+  </div>
