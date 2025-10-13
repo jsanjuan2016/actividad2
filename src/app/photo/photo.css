@@ -64,7 +64,7 @@ a {
     padding: 12px 24px;
     border: none;
     border-radius: 10px;
-    background-color: #4CAF50;
+    background-color: #0079c2; /* #4CAF50; */
     color: white;
     cursor: pointer;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
@@ -73,7 +73,7 @@ a {
 }
 
 .btn-back:hover {
-    background-color: #45a049;
+    background-color: #029dfd; /* #45a049; */
     transform: translateY(-3px);
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
 }

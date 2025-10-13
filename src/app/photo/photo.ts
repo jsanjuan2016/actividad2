@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink, ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-photo',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './photo.html',
   styleUrl: './photo.css'
 })
@@ -30,9 +30,13 @@ export class Photo {
     if (queryParams['returnUrl']) {
       this.returnUrl = queryParams['returnUrl'];
       this.showBackButton = true;
+
+      console.log('Return URL:', this.returnUrl);
     }
     if (queryParams['page']) {
       this.returnPage = parseInt(queryParams['page'], 10) || 1;
+
+      console.log('Return Page:', this.returnPage);
     }
   }
 
