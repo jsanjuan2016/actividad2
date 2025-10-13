@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 interface Photo {
   id: number;
   url: string;
-  title: string;
+  author: string;
 }
 
 @Component({
@@ -24,12 +24,12 @@ export class Galeria implements OnInit {
   heightImg: number = 200;
   
   photos: Photo[] = [
-    { url: `https://picsum.photos/id/1018/${this.widthImg}/${this.heightImg}`, title: 'Montañas y cielo', id: 1018 },
-    { url: `https://picsum.photos/id/1025/${this.widthImg}/${this.heightImg}`, title: 'Cachorro en la hierba', id: 1025 },
-    { url: `https://picsum.photos/id/1039/${this.widthImg}/${this.heightImg}`, title: 'Puente y río', id: 1039 },
-    { url: `https://picsum.photos/id/1060/${this.widthImg}/${this.heightImg}`, title: 'Tetería', id: 1060 },
-    { url: `https://picsum.photos/id/1084/${this.widthImg}/${this.heightImg}`, title: 'Leones marinos', id: 1084 },
-    { url: `https://picsum.photos/id/1074/${this.widthImg}/${this.heightImg}`, title: 'Leona', id: 1074 }
+    { url: `https://picsum.photos/id/1018/${this.widthImg}/${this.heightImg}`, author: 'Montañas y cielo', id: 1018 },
+    { url: `https://picsum.photos/id/1025/${this.widthImg}/${this.heightImg}`, author: 'Cachorro en la hierba', id: 1025 },
+    { url: `https://picsum.photos/id/1039/${this.widthImg}/${this.heightImg}`, author: 'Puente y río', id: 1039 },
+    { url: `https://picsum.photos/id/1060/${this.widthImg}/${this.heightImg}`, author: 'Tetería', id: 1060 },
+    { url: `https://picsum.photos/id/1084/${this.widthImg}/${this.heightImg}`, author: 'Leones marinos', id: 1084 },
+    { url: `https://picsum.photos/id/1074/${this.widthImg}/${this.heightImg}`, author: 'https://picsum.photos/id/1074/info', id: 1074 }
   ];
 
   constructor() { }
