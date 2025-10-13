@@ -15,9 +15,9 @@
                     <li><a href="#">Abstracto</a></li>
                 </ul> -->
             </li>
-            <li class="dropdown">
+            <li class="dropdown"  (click)="toggleCategoriasMenu()">
                 <a href="#">Categorías</a>
-                <!-- <ul class="dropdown-menu">
+                <!-- <ul class="dropdown-menu" [ngClass]="{'show': isCategoriasOpen}">
                     <li><a href="#">Diseño Web</a></li>
                     <li><a href="#">Fotografía</a></li>
                     <li class="dropdown-submenu">
