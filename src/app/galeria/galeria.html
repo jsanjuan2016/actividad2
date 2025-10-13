@@ -1,11 +1,12 @@
 <h2>Galer&iacute;a de im&aacute;genes</h2>
+<!-- <h3>Autor: {{ author | async }}</h3> -->
 
 <div class="gallery-container">
 @for (photo of photos; track photo.url) {    
   <div class="photo-card">
-    <a [routerLink]="['/photo', photo.id, photo.author]" rel="noopener noreferrer">
-      <img [src]="photo.url" [alt]="photo.author">
-      <p>{{ photo.author }}</p>
+    <a [routerLink]="['/photo', photo.id, photo.author | async]" rel="noopener noreferrer">
+      <img [src]="photo.url" [alt]="photo.author | async">
+      <p>{{ photo.author | async }}</p>
     </a> 
   </div>
 }
