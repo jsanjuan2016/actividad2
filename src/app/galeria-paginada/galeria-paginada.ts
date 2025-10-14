@@ -31,7 +31,7 @@ export class GaleriaPaginada implements OnInit {
   
   // Configuración de paginación
   currentPage: number = 1;
-  itemsPerPage: number = 6; // Número de imágenes por página
+  itemsPerPage: number = 9; // Número de imágenes por página
   totalPages: number = 0;
   
   constructor() { }
