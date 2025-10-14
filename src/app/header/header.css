@@ -11,20 +11,20 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Alinea los elementos de la lista horizontalmente */
-    justify-content: center; /* Centra el menú en la cabecera */
+    display: flex;
+    justify-content: center;
 }
 
 /* Elementos de la lista principal */
 .main-nav li {
-    position: relative; /* Clave para posicionar el submenú */
+    position: relative;
     padding: 0 15px;
     margin: 0;
 }
 
 /* Enlaces del menú principal */
 .main-nav a {
-    color: #fff; /* Texto blanco para que contraste con el fondo de la cabecera */
+    color: #fff;
     text-decoration: none;
     padding: 5px 10px;
     display: block;
@@ -36,79 +36,4 @@
 .main-nav a:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-}
-
-
-/* --- Estilos para los Submenús (Dropdown) --- */
-
-/* Submenú (oculto por defecto) */
-.dropdown-menu {
-    display: none; /* Oculta el submenú */
-    position: absolute;
-    top: 100%; /* Lo coloca justo debajo del elemento padre */
-    left: 0;
-    min-width: 150px;
-    background-color: #333; /* Fondo oscuro para los submenús */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 10; /* Asegura que esté por encima de otros elementos */
-    padding: 5px 0;
-    border-radius: 4px;
-    text-align: left;
-    /* Elimina el flexbox para que los items vuelvan a ser verticales */
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-/* Elementos del submenú */
-.dropdown-menu li {
-    width: 100%; /* Ocupa todo el ancho del submenú */
-    padding: 0;
-    margin: 0;
-}
-
-/* Enlaces dentro del submenú */
-.dropdown-menu a {
-    color: #fff;
-    padding: 8px 15px;
-    font-weight: 300;
-}
-
-/* Efecto al pasar el ratón en los enlaces del submenú */
-.dropdown-menu a:hover {
-    background-color: #00c2b2; /* Usa el color primario de la cabecera */
-    color: #fff;
-}
-
-/* Mostrar el submenú al pasar el ratón sobre el elemento padre (li.dropdown) */
-.dropdown:hover > .dropdown-menu {
-    display: block;
-}
-
-
-/* --- Estilos para Submenús Anidados (Sub-Submenús) --- */
-
-/* Sub-submenú (anidado) */
-.submenu {
-    display: none; /* Oculto por defecto */
-    position: absolute;
-    top: 0; /* Alinea el top con el elemento padre (li.dropdown-submenu) */
-    left: 100%; /* Lo coloca a la derecha del elemento padre */
-    min-width: 120px;
-    background-color: #444; /* Un color ligeramente diferente para el nivel 2 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 11;
-    padding: 5px 0;
-    border-radius: 4px;
-}
-
-/* Mostrar el sub-submenú al pasar el ratón sobre el elemento padre (li.dropdown-submenu) */
-.dropdown-submenu:hover > .submenu {
-    display: block;
-}
-
-/* Ajuste para el enlace que abre el sub-submenú */
-.dropdown-submenu > a {
-    /* Mantiene el padding y estilo del nivel anterior */
-    padding-right: 25px; /* Más espacio a la derecha para el indicador > */
-    position: relative;
 }
