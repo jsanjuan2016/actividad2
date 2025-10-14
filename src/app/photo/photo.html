@@ -1,7 +1,7 @@
 
-  <h3>{{ Title }}</h3>
+  <h3>{{ (Title == 'null' ? 'La imagen con ID ' + Id + ' no existe en picsum.photos' : Title) }}</h3>
   <div class="photo-card">
-    <img src="{{Url}}" alt="{{ Title }}">
+    <img src="{{Url}}" alt="{{ Title }}" (error)="Url = `https://placehold.co/1024x768/lightgrey/white?font=Lato&text=Id:${Id}+Imagen+no+existente+\\nen+picsum.photos`">
   </div>    
     
   <div class="navigation-buttons">
