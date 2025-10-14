@@ -40,6 +40,7 @@ export class GaleriaAleatoria implements OnInit {
         )
       });
     }
+    console.table(this.photos.map(photo => ({ id: photo.id, url: photo.url, author: photo.author.subscribe(name => console.log(name)) })));
 
   }
 }
