@@ -6,8 +6,8 @@
       <a [routerLink]="['/photo', photo.id, photo.author | async]" 
          [queryParams]="{returnUrl: '/galeria-paginada', page: currentPage}" 
          rel="noopener noreferrer">
-        <img [src]="photo.url" [alt]="photo.author | async">
-        <p>{{ photo.author | async }}</p>
+        <img [src]="photo.url" [alt]="photo.author | async" (error)="photo.url = `https://placehold.co/300x200/lightgrey/white?font=Lato&text=Id:${photo.id}+Imagen+no+existente+\\nen+picsum.photos`">
+        <p>{{ (photo.author | async) ? (photo.author | async) : 'La imagen con ID ' + photo.id + ' no existe en picsum.photos' }}</p>
       </a> 
     </div>
   }
