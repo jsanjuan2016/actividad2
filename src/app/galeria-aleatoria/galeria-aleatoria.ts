@@ -31,7 +31,7 @@ export class GaleriaAleatoria implements OnInit {
 
     this.numeroAleatorioEntero = Math.floor(Math.random() * 1079); //Numero aleatorio entre 0 y 1078
     
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 9; i++) {
       this.photos.push({
         id: this.numeroAleatorioEntero + i, //id: id,
         url: `https://picsum.photos/id/${this.numeroAleatorioEntero + i}/300/200`,
@@ -40,7 +40,6 @@ export class GaleriaAleatoria implements OnInit {
         )
       });
     }
-    console.table(this.photos.map(photo => ({ id: photo.id, url: photo.url, author: photo.author.subscribe(name => console.log(name)) })));
-
+    //console.table(this.photos.map(photo => ({ id: photo.id, url: photo.url, author: photo.author.subscribe(name => console.log(name)) })));
   }
 }

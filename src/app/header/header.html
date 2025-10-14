@@ -5,13 +5,13 @@
     <nav class="main-nav">
         <ul>
             <li>
-                <a routerLink="/">Inicio</a>
+                <a class="{{ isActiveRoute('') }}"routerLink="/">Inicio</a>
             </li>
             <li>
-                <a routerLink="/galeria-paginada">Galería</a>
+                <a class="{{ isActiveRoute('/galeria-paginada') }}" routerLink="/galeria-paginada">Galería</a>
             </li>
             <li>
-                <a href="/about">Acerca de</a>
+                <a class="{{ isActiveRoute('/about') }}" routerLink="/about">Acerca de</a>
             </li>
         </ul>
     </nav>

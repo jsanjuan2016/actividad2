@@ -9,22 +9,22 @@ import { Component } from '@angular/core';
 })
 export class ContentWrapper {
 
-    //PRUEBAS
-    onActivate(componentRef: any) {
-    // componentRef is the instance of the component being activated
-    console.log('New component ContentWrapper activated:', componentRef);
-    // Example: set a property on the activated component
-    componentRef.someProperty = 'some value from parent';
-  }
-  onDeactivate(componentRef: any) {
-    console.log('Component ContentWrapper deactivated:', componentRef);
-  }
-  onAttach(componentRef: any) {
-    console.log('Component ContentWrapper attached:', componentRef);
-  }
-  onDetach(componentRef: any) {
-    console.log('Component ContentWrapper detached:', componentRef);
-  }
-  //FIN PRUEBAS
+  //   //PRUEBAS
+  //   onActivate(componentRef: any) {
+  //   // componentRef is the instance of the component being activated
+  //   console.log('New component ContentWrapper activated:', componentRef);
+  //   // Example: set a property on the activated component
+  //   componentRef.someProperty = 'some value from parent';
+  // }
+  // onDeactivate(componentRef: any) {
+  //   console.log('Component ContentWrapper deactivated:', componentRef);
+  // }
+  // onAttach(componentRef: any) {
+  //   console.log('Component ContentWrapper attached:', componentRef);
+  // }
+  // onDetach(componentRef: any) {
+  //   console.log('Component ContentWrapper detached:', componentRef);
+  // }
+  // //FIN PRUEBAS
 
 }

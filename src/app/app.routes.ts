@@ -8,7 +8,7 @@ import { GaleriaPaginada } from './galeria-paginada/galeria-paginada';
 import { About } from './about/about';
 
 export const routes: Routes = [
-  { path: '', component: GaleriaAleatoria, title: 'Galeria - actividad2', data: { app: App } },
+  { path: '', component: GaleriaAleatoria },
   { path: 'galeria', component: Galeria },
   { path: 'about', component: About },
   { path: 'galeria-paginada', component: GaleriaPaginada },

@@ -80,16 +80,6 @@ box-shadow: 10px 10px 34px -1px rgba(0,0,0,0.23);
     border-radius: 8px;
 }
 
-#toc-container ul a {
-    color: #333;
-    text-decoration: none;
-}
-#toc-container ul a.active {
-    color: #333;
-    font-weight: bold;
-    /* background-color: #eefffe; */
-    text-decoration: none;
-}
 
 /* Estilos para la paginación */
 .pagination {
@@ -113,23 +103,6 @@ box-shadow: 10px 10px 34px -1px rgba(0,0,0,0.23);
     border-color: #333;  
 }
 
-/* Estilos del pie de página */
-.page-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 0.5em 0;
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-}
-.page-footer p {
-    margin: 0;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 0.8rem;
-}
 
 /* Estilos de utilidad para espaciados */
 .pb-0 {
