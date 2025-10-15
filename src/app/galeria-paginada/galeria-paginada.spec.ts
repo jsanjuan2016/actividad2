@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { GaleriaPaginada } from './galeria-paginada';
 import { PicsumService } from '../services/picsum.service';
 import { of } from 'rxjs';
+import { provideRouter } from '@angular/router';
 
 describe('GaleriaPaginada', () => {
   let component: GaleriaPaginada;
@@ -15,7 +16,8 @@ describe('GaleriaPaginada', () => {
     await TestBed.configureTestingModule({
       imports: [GaleriaPaginada, RouterTestingModule],
       providers: [
-        { provide: PicsumService, useValue: spy }
+        { provide: PicsumService, useValue: spy }, 
+        provideRouter([])
       ]
     })
     .compileComponents();
