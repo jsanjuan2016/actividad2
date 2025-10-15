@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClient, HttpHandler } from '@angular/common/http';
+import { HttpClient, provideHttpClient} from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideRouter } from '@angular/router';
 import { Galeria } from './galeria';
 
@@ -11,7 +12,7 @@ describe('Galeria', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Galeria],
-      providers: [HttpClient, HttpHandler, provideRouter([])]
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideRouter([])]
     })
     .compileComponents();
 
