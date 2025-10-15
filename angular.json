@@ -26,7 +26,8 @@
             ],
             "styles": [
               "src/styles.css"
-            ]
+            ],
+            "outputPath": "dist/actividad2"
           },
           "configurations": {
             "production": {
@@ -96,6 +97,9 @@
               "devServerTarget": "actividad2:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
